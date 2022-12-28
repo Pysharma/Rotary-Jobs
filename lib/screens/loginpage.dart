@@ -116,22 +116,24 @@ class _loginscreenState extends State<loginscreen> {
                 height: 50,
                 margin: EdgeInsets.symmetric(horizontal: 40,vertical: 5),
                 width: double.infinity,
-                child: FlatButton(
+                child: TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Color(0xFF174590)) ,
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ))
+                  ),
                   child: Text("Get OTP",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
                       fontFamily: 'Lato',
+                      color: Colors.white,
                     ),
                   ),
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (_)=> otpPage(text: currentText,),));
                   },
-                  color: Color(0xFF174590),
-                  textColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(4),
-                  ),
                 ),
               ),
             ],

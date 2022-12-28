@@ -454,9 +454,10 @@ class JobDetails extends StatelessWidget {
                         ),),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 6),
-                        child: FlatButton(
-                          height: 38,
-                          color: Colors.white,
+                        child: TextButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(Colors.white) ,
+                          ),
                           onPressed: () {  },
                           child: Text("Computer Skilled",style: TextStyle(color: Colors.black87,fontSize: 16, fontFamily: 'Lato',),),
 
@@ -591,11 +592,3 @@ class JobDetails extends StatelessWidget {
     );
   }
 }
-
-
-// Text("samit",
-// style: TextStyle(
-// fontSize: 15,
-// fontFamily: 'Poppins',
-// color: Colors.grey,
-// ),),

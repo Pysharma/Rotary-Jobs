@@ -219,9 +219,10 @@ class _popularLcJobState extends State<popularLcJob> {
                                 ),
 
 
-                                FlatButton(
-                                  height: 42,
-                                  color: Colors.orangeAccent,
+                                TextButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStateProperty.all(Colors.orangeAccent) ,
+                                  ),
                                   onPressed: () {
                                     Navigator.push(context, MaterialPageRoute(builder: (context)=> ResumeUpload(),),);
                                   },

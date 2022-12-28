@@ -113,9 +113,16 @@ class _ResumeUploadState extends State<ResumeUpload> {
                 ),
                 margin: EdgeInsets.symmetric(),
                 width: double.infinity,
-                child: FlatButton(
+                child: TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white) ,
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ))
+                  ),
                   child: Text("Apply Using Profile",
                     style: TextStyle(
+                      color: Colors.black87,
                       fontSize: 19,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Poppins',
@@ -124,11 +131,6 @@ class _ResumeUploadState extends State<ResumeUpload> {
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (_)=> ThankyouPage()),);
                   },
-                  color: Colors.white,
-                  textColor: Colors.black87,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(4),
-                  ),
                 ),
               ),
             ],
@@ -144,9 +146,16 @@ class _ResumeUploadState extends State<ResumeUpload> {
             height: 50,
             margin: EdgeInsets.symmetric(),
             width: double.infinity,
-            child: FlatButton(
+            child: TextButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.orangeAccent) ,
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ))
+              ),
               child: Text("Apply",
                 style: TextStyle(
+                  color: Colors.white,
                   fontSize: 19,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Poppins',
@@ -155,11 +164,6 @@ class _ResumeUploadState extends State<ResumeUpload> {
               onPressed: (){
 
               },
-              color: Colors.orangeAccent,
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(6),
-              ),
             ),
           ),
         ),

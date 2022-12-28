@@ -57,9 +57,17 @@ class ThankyouPage extends StatelessWidget {
                 height: 48,
                 margin: EdgeInsets.symmetric(),
                 width: double.infinity,
-                child: FlatButton(
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.orangeAccent) ,
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6),
+                      ))
+                  ),
                   child: Text("Start Finding Jobs",
                     style: TextStyle(
+                      backgroundColor: Colors.orangeAccent,
+                      color: Colors.white,
                       fontSize: 19,
                       fontWeight: FontWeight.w500,
                       fontFamily: 'Poppins',
@@ -68,11 +76,6 @@ class ThankyouPage extends StatelessWidget {
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (_)=> homepage()),);
                   },
-                  color: Colors.orangeAccent,
-                  textColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6),
-                  ),
                 ),
               ),
             ),
